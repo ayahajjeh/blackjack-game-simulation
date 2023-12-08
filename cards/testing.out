@@ -1,0 +1,107 @@
+
+-----create new deck-----
+should contain values 1-52 in order:
+deck: [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] 
+
+-----shuffle new deck-----
+should contain values 1-52 in random order:
+deck: [18] [27] [25] [17] [16] [13] [33] [10] [7] [39] [34] [11] [6] [37] [12] [20] [8] [45] [26] [42] [52] [32] [19] [21] [15] [14] [43] [47] [3] [1] [5] [24] [30] [50] [48] [29] [23] [35] [38] [40] [31] [46] [28] [49] [41] [4] [44] [2] [22] [51] [9] [36] 
+
+-----create new hand A-----
+should be empty:
+hand: (empty)
+
+-----create new hand B-----
+should be empty:
+hand: (empty)
+
+-----deal 10 cards to hand A-----
+Ten of Hearts (card value: 10)
+Nine of Clubs (card value: 9)
+Queen of Spades (card value: 10)
+Nine of Diamonds (card value: 9)
+Two of Clubs (card value: 2)
+Five of Spades (card value: 5)
+Four of Clubs (card value: 4)
+Two of Spades (card value: 2)
+Ten of Spades (card value: 10)
+Two of Hearts (card value: 2)
+should have 10 cards:
+hand: [36] [9] [51] [22] [2] [44] [4] [41] [49] [28] 
+number of Aces: 0
+total value: 63
+
+-----deal 10 cards to hand B-----
+Seven of Spades (card value: 7)
+Five of Hearts (card value: 5)
+Ace of Spades (card value: 11)
+Queen of Hearts (card value: 10)
+Nine of Hearts (card value: 9)
+Ten of Diamonds (card value: 10)
+Three of Hearts (card value: 3)
+Nine of Spades (card value: 9)
+Jack of Spades (card value: 10)
+Four of Hearts (card value: 4)
+should have 10 cards:
+hand: [46] [31] [40] [38] [35] [23] [29] [48] [50] [30] 
+number of Aces: 1
+total value: 68
+
+-----check deck-----
+deck not empty
+should have 32 cards:
+deck: [18] [27] [25] [17] [16] [13] [33] [10] [7] [39] [34] [11] [6] [37] [12] [20] [8] [45] [26] [42] [52] [32] [19] [21] [15] [14] [43] [47] [3] [1] [5] [24] 
+
+-----shuffle again and deal out all cards-----
+should have 32 cards in another order:
+deck: [20] [6] [37] [21] [42] [3] [12] [11] [16] [14] [19] [7] [10] [17] [45] [26] [34] [18] [47] [25] [33] [1] [52] [43] [27] [5] [24] [32] [13] [15] [8] [39] 
+King of Hearts (card value: 10)
+Eight of Clubs (card value: 8)
+Two of Diamonds (card value: 2)
+King of Clubs (card value: 10)
+Six of Hearts (card value: 6)
+Jack of Diamonds (card value: 10)
+Five of Clubs (card value: 5)
+Ace of Hearts (card value: 11)
+Four of Spades (card value: 4)
+King of Spades (card value: 10)
+Ace of Clubs (card value: 11)
+Seven of Hearts (card value: 7)
+Queen of Diamonds (card value: 10)
+Eight of Spades (card value: 8)
+Five of Diamonds (card value: 5)
+Eight of Hearts (card value: 8)
+King of Diamonds (card value: 10)
+Six of Spades (card value: 6)
+Four of Diamonds (card value: 4)
+Ten of Clubs (card value: 10)
+Seven of Clubs (card value: 7)
+Six of Diamonds (card value: 6)
+Ace of Diamonds (card value: 11)
+Three of Diamonds (card value: 3)
+Jack of Clubs (card value: 10)
+Queen of Clubs (card value: 10)
+Three of Clubs (card value: 3)
+Three of Spades (card value: 3)
+Eight of Diamonds (card value: 8)
+Jack of Hearts (card value: 10)
+Six of Clubs (card value: 6)
+Seven of Diamonds (card value: 7)
+Empty deck
+
+-----check deck_isEmpty function-----
+should be empty:
+deck: empty deck
+
+-----simulate player-----
+---create hand---
+should be empty:
+hand: (empty)
+---pass card as a string---
+card: Ace of Hearts (should be Ace of Hearts)
+---add card to hand---
+hand: [27] 
+---check Aces---
+current value of hand: 11 (should be 11)
+current value of hand: 12 (should be 12)
+current value of hand: 13 (should be 13)

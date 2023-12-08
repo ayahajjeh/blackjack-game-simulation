@@ -1,0 +1,23 @@
+bash -v testing.sh
+###### incorrect #s of arguments ######
+# zero arguments                                                                    
+./entry
+Usage: ./player server_address PORT <PLAYER_NAME or NUMBER_OF_ROUNDS> MODE
+
+# one argument                                                                      
+./entry 8088
+Usage: ./player server_address PORT <PLAYER_NAME or NUMBER_OF_ROUNDS> MODE
+
+# three arguments
+./entry 8088 10 100
+Usage: ./player server_address PORT <PLAYER_NAME or NUMBER_OF_ROUNDS> MODE
+
+##### invalid arguments ######
+# non-integer port number
+./entry WRONG 10
+Usage: ./player server_address PORT <PLAYER_NAME or NUMBER_OF_ROUNDS> MODE
+
+# non-integer numberofrounds
+./entry 8088 WRONG
+Usage: ./player server_address PORT <PLAYER_NAME or NUMBER_OF_ROUNDS> MODE
+make: *** [test] Error 1

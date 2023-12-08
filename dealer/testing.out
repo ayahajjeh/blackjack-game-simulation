@@ -1,0 +1,47 @@
+bash -v testing.sh
+module () {  _module_raw "$@" 2>&1
+}
+ml () {  module ml "$@"
+}
+_module_raw () {  eval `/usr/bin/tclsh8.6 /usr/lib/x86_64-linux-gnu/modulecmd.tcl bash "$@"`;
+ _mlstatus=$?;
+ return $_mlstatus
+}
+#!/bin/bash
+#
+# testing.sh - testing program for dealer.c
+#
+# input: none
+# output: prints results of testing different inputs for dealer.c to testing.out
+#
+# usage: bash -v testing.sh >& testing.out OR make test >& testing.out
+#
+# Daniel Lampert, CS 50, Fall 2022
+
+#myvalgrind = valgrind --leak-check=full --show-leak-kinds=all
+
+###### incorrect #s of arguments ######
+# zero arguments                                                                    
+./dealer
+wrong number of parameters passed
+usage is: ./dealer portNumber numberOfRounds
+
+# one argument                                                                      
+./dealer 8088
+wrong number of parameters passed
+usage is: ./dealer portNumber numberOfRounds
+
+# three arguments
+./dealer 8088 10 100
+wrong number of parameters passed
+usage is: ./dealer portNumber numberOfRounds
+
+##### invalid arguments ######
+# non-integer port number
+./dealer WRONG 10
+port must be an integer value
+
+# non-integer numberofrounds
+./dealer 8088 WRONG
+numberOfRounds must be an integer value
+make: *** [Makefile:27: test] Error 3
