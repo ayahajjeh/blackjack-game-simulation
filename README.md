@@ -17,7 +17,7 @@ The Network module uses a delay when sending of 50 ms to prevent overlapping mes
 Dealer:
 * `Makefile` - compilation procedure
 * `dealer.c` - dealer implementation
-* `testing.sh - short testing script
+* `testing.sh` - short testing script
 * `testing.out` - testing results
  
 Player:
